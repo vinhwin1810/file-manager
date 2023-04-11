@@ -16,7 +16,7 @@ export default function Password() {
 
   const formik = useFormik({
     initialValues: {
-      password: "admin@123",
+      password: "",
     },
     validate: passwordValidate,
     validateOnBlur: false,
@@ -55,7 +55,7 @@ export default function Password() {
               Hello {apiData?.firstName || apiData?.username}
             </h4>
             <span className="py-4 text-xl w-2/3 text-center text-gray-500">
-              Explore More by connecting with us.
+              Please view the files.
             </span>
           </div>
 

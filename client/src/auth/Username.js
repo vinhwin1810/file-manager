@@ -13,9 +13,7 @@ export default function Username() {
   const setUsername = useAuthStore((state) => state.setUsername);
 
   const formik = useFormik({
-    initialValues: {
-      username: "example123",
-    },
+    initialValues: { username: "" },
     validate: usernameValidate,
     validateOnBlur: false,
     validateOnChange: false,
@@ -32,9 +30,9 @@ export default function Username() {
       <div className="flex justify-center items-center h-screen">
         <div className={styles.glass}>
           <div className="title flex flex-col items-center">
-            <h4 className="text-5xl font-bold">Hello Again!</h4>
+            <h4 className="text-5xl font-bold">Hello!</h4>
             <span className="py-4 text-xl w-2/3 text-center text-gray-500">
-              Explore More by connecting with us.
+              Sign in to view Files.
             </span>
           </div>
 

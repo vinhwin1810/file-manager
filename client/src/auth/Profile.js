@@ -136,9 +136,9 @@ export default function Profile() {
 
             <div className="text-center py-4">
               <span className="text-gray-500">
-                come back later?{" "}
+                You want to come back?{" "}
                 <button onClick={userLogout} className="text-red-500" to="/">
-                  Logout
+                  Log out
                 </button>
               </span>
             </div>
