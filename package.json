@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "react-scripts build"
+  },
   "dependencies": {
     "serverless-http": "^3.2.0"
   }
