@@ -1,8 +1,17 @@
 {
-  "scripts": {
-    "build": "react-scripts build"
-  },
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "private": true,
   "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
     "serverless-http": "^3.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   }
 }
