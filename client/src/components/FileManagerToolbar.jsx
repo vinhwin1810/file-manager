@@ -13,6 +13,7 @@ import {
   toggleSortBtnGroup,
 } from "../helper/helperMethods";
 import { Label } from "@progress/kendo-react-labels";
+import "../styles/filemanagertoolbar.css";
 
 export const FileManagerToolbar = (props) => {
   const [dialogVisible, setDialogVisible] = useState(false);
@@ -112,25 +113,31 @@ export const FileManagerToolbar = (props) => {
           onClose={handleDialogVisibility}
           contentStyle={{ width: "530px" }}
         >
-          <Upload
-            batch={false}
-            multiple={true}
-            files={props.files}
-            withCredentials={false}
-            onAdd={handleFileChange}
-            onRemove={handleFileChange}
-            onProgress={handleFileChange}
-            onStatusChange={handleFileChange}
-            saveUrl={""}
-            removeUrl={""}
-          />
-          <DialogActionsBar layout={"end"}>
-            <Button onClick={handleUploadClearList}> Clear List</Button>
-            <Button themeColor={"primary"} onClick={handleUploadDone}>
-              {" "}
-              Done{" "}
-            </Button>
-          </DialogActionsBar>
+          <div style={{ display: "grid", gridTemplateRows: "1fr auto" }}>
+            <div style={{ marginBottom: "20px" }}>
+              <Upload
+                batch={false}
+                multiple={true}
+                files={props.files}
+                withCredentials={false}
+                onAdd={handleFileChange}
+                onRemove={handleFileChange}
+                onProgress={handleFileChange}
+                onStatusChange={handleFileChange}
+                saveUrl={""}
+                removeUrl={""}
+              />
+            </div>
+            <DialogActionsBar layout={"end"}>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <Button onClick={handleUploadClearList}> Clear List</Button>
+                <Button themeColor={"primary"} onClick={handleUploadDone}>
+                  {" "}
+                  Done{" "}
+                </Button>
+              </div>
+            </DialogActionsBar>
+          </div>
         </Dialog>
       )}
       <ButtonGroup>
@@ -166,7 +173,13 @@ export const FileManagerToolbar = (props) => {
           onClick={handleListViewChange}
         />
       </ButtonGroup>
+
       <div className="k-spacer">&nbsp;</div>
+      <Button onClick={() => (window.location.href = "/profile")}>
+        Update your Profile!
+      </Button>
+      <div className="k-spacer">&nbsp;</div>
+
       <div className="k-filemanager-details-toggle">
         <Label>View Details </Label>
         <Switch defaultChecked={true} onChange={handleSwitchChange} />

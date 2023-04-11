@@ -9,10 +9,10 @@ import Profile from "./auth/Profile";
 import Recovery from "./auth/Recovery";
 import Reset from "./auth/Reset";
 import PageNotFound from "./auth/PageNotFound";
+import View from "./auth/viewPage";
 
 /** auth middleware */
 import { AuthorizeUser, ProtectRoute } from "./middleware/auth";
-import View from "./viewPage/viewPage";
 
 /** root routes */
 const router = createBrowserRouter([
@@ -47,6 +47,10 @@ const router = createBrowserRouter([
   {
     path: "/reset",
     element: <Reset></Reset>,
+  },
+  {
+    path: "/view",
+    element: <View></View>,
   },
   {
     path: "*",

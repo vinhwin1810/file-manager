@@ -65,11 +65,11 @@ export default function Profile() {
       <div className="flex justify-center items-center h-screen">
         <div
           className={`${styles.glass} ${extend.glass}`}
-          style={{ width: "45%", paddingTop: "3em" }}
+          style={{ width: "45%", paddingTop: "1em" }}
         >
           <div className="title flex flex-col items-center">
             <h4 className="text-5xl font-bold">Profile</h4>
-            <span className="py-4 text-xl w-2/3 text-center text-gray-500">
+            <span className="py-4 text-xl w-2/3 text-center text-black">
               You can update the details.
             </span>
           </div>
@@ -134,8 +134,8 @@ export default function Profile() {
               </button>
             </div>
 
-            <div className="text-center py-4">
-              <span className="text-gray-500">
+            <div className="glass text-center py-4">
+              <span className="text-black">
                 You want to come back?{" "}
                 <button onClick={userLogout} className="text-red-500" to="/">
                   Log out

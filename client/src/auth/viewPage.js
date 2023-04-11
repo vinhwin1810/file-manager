@@ -356,7 +356,10 @@ const View = () => {
   });
 
   return (
-    <div className="k-widget k-filemanager k-filemanager-resizable">
+    <div
+      className="k-widget k-filemanager k-filemanager-resizable"
+      style={{ height: "100vh" }}
+    >
       <div className="main fade-in k-body">
         <Switch checked={isDarkMode} onChange={toggleTheme} />
       </div>
@@ -373,7 +376,7 @@ const View = () => {
           onFileChange={handleFileChange}
           onClearFileList={handleClearFileList}
           onUploadComplete={handleUploadComplete}
-        />
+        ></FileManagerToolbar>
       </div>
       <div className="k-filemanager-content-container">
         <Splitter panes={panes} onChange={handleSplitterChange}>
