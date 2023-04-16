@@ -38,5 +38,5 @@ connect()
     }
   })
   .catch((error) => {
-    console.log("Invalid database connection...!");
+    console.log(error);
   });
